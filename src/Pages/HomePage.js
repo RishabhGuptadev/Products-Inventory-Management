@@ -82,5 +82,21 @@ background:#f8f8ff;
         align-items:center;
         justify-content:center;
     }
+   
+
+    .style-addproduct-button{
+        position:relative;
+        margin:0px;
+    }
+    .style-addproduct-button button{
+               margin:0px;
+               margin-left:20px;
+               padding:10px 20px;
+    }
+    .navbar{
+        margin:0px;
+        display:flex;
+       justify-content:center;
+    }
 }
 `

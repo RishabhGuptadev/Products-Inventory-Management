@@ -1,5 +1,6 @@
 import React from 'react'
-import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
+import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
+import styled from 'styled-components';
 export default function Rating({rating}) {
     const tempStars = Array.from({length:5}, (_,index)=>{
         const number = index+0.5;
@@ -10,8 +11,18 @@ export default function Rating({rating}) {
     
       }) 
     return (
+        <Wrapper>
         <div>
-            <h4>{tempStars}</h4>
-        </div>
+        <h4>{tempStars}</h4> 
+        </div> 
+            
+        </Wrapper>
     )
 }
+
+const Wrapper = styled.div`
+ @media screen and (max-width:900px){
+   
+   width:100%;
+ }
+`

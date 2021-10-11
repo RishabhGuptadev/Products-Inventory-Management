@@ -48,4 +48,15 @@ margin:40px 0px;
     background: #5B8E23;
     color:white;
 }
+
+@media screen and (max-width:900px){
+    .input-style{
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+    }
+    .input-style button {
+        margin-top:10px;
+    }
+}
 `

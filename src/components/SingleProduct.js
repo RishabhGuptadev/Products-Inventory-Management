@@ -33,9 +33,9 @@ export default function SingleProduct({id,name,image,Username,price,quantity,rat
     <h4>{name}</h4> 
     <Rating rating={rating}/>
     </div>
-     <div style={{flex:"0.5"}}>
+     <div style={{flex:"0.5", marginRight:"20px"}}>
      <h4>${price}</h4></div>
-     <div>
+     <div className="edit-btn">
      <button className="qty-btn style-btn" onClick={()=>handleEdit()}>Edit</button>
      </div>
      <div> 
@@ -55,14 +55,15 @@ const Wrapper = styled.div`
 margin : 40px 20px;
 display:flex;
 align-items:center;
-justify-content: center;
+justify-content:center;
+margin:0px;
 height:150px;
 font-family:"Montserrat semibold";
 color: #5B8E23;
 padding:0px 20px;
 
 .inner-box{
-    width:60%;
+    width:100%;
     height:100%;
     display:flex;
     align-items:center;
@@ -73,7 +74,6 @@ padding:0px 20px;
 }
 .style-name{
     width:200px;
-
     display:flex;
     flex-direction:column;
     align-items:flex-start;
@@ -81,7 +81,6 @@ padding:0px 20px;
 }
 .style-name h4{
     margin:0px 0px;
-    
 }
 .style-image img{
     height:125px;
@@ -106,5 +105,47 @@ padding:0px 20px;
     color: #5B8E23;
     padding:0px 20px;
 }
-.
+@media screen and (max-width:900px){
+   
+    justify-content:space-between;
+    .style-image img{
+        height:65px;
+        width:65px;
+        margin-right:20px;
+    }
+
+    .style-name h4{
+        font-size:12px;
+        
+    }
+        .style-name {
+            margin-right:18px;
+            width:100%;
+        }
+    .qty-btn{
+        padding:5px;
+    }
+    .qty-btn button{
+        background:transparent;
+        border:none;
+        font-size:15px;
+    }
+    h4{
+        font-size:12px;
+    }
+    .qty-btn{
+        justify-content:flex-end;
+        align-items:center;
+        border: 1px solid grey;
+        padding:10px;
+        border-radius:12px;
+    }
+    .edit-btn{
+        margin-right:15px;
+    }
+    .edit-btn button{
+        padding:5px;
+        font-size:15px;
+    }
+}
 `

@@ -20,9 +20,9 @@ export default function FilterComponent() {
         dispatch(filterByQty(Qty));
     },[Qty])
     return (
-        <Wrapper className="Filter">
+        <Wrapper>
            
-                <form style={{display:"flex", justifyContent:"space-between",width:"30vw"}}>
+                <form style={{}}>
                 <h4>Price : </h4>
                     <input type="range" min="0" max={maxPrice} value={priceFilter} onChange={(e)=>setPriceFilter(e.target.value)}/>
                     <h4>Quantity: </h4>
@@ -36,4 +36,13 @@ const Wrapper = styled.div`
     display:flex;
     align-items:center;
     justify-content: space-around;
+    
+    @media screen and (max-width:900px){
+        .Filter{
+            display:flex;
+            justify-content:space-between;
+            width:30vw;
+        }
+    }
+    
 `
